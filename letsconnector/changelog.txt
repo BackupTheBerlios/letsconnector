@@ -1,5 +1,15 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0002 AWT 22/06/2004
+
+The create_member.cgi script and lets_html.py now work (have run these on my
+own machine). After the submit create_member.cgi simply prints the input it
+was given, the next step is to get it to connect to the database. I'm still
+pondering the use of some kind of CGI framework, looking at:
+http://crawdad.sourceforge.net/doc/2.0/index.html
+http://thraxil.org/code/cgi_app/
+http://www.object-craft.com.au/projects/albatross/albatross/
+
 letsconnector-0001 AWT 22/06/2004
 
 Added the cgi-bin directory, this changelog, and the (small and incomplete)

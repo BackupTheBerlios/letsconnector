@@ -1,28 +1,37 @@
 #!/usr/bin/python
 
-import lets_html.py
+import cgi
+import lets_html
 import cgitb
 
 cgitb.enable()
 
-def create_member_ui():
+form = cgi.FieldStorage()
+
+def form_for_input():
     """Prints the HTML form for creating a new member"""
-    print "Content-Type: text/html\n\n"
+    h = lets_html.helpers()
+    body = "<h3>Add New Member</h3><p>\n"
+    body += h.form_begin("create_member.cgi")
+    body += h.text_input("Name:", "name", 40, 128)
+    body += h.text_input("Address:", "address", 40, 255)
+    body += h.text_input("Phone:", "phone_number_1", 20, 20)
+    body += h.text_input("Alt. Phone:", "phone_number_2", 20, 20)
+    body += h.text_input("Email:", "email_1", 40, 128)
+    body += h.text_input("Alt. Email:", "email_2", 40, 128)
+    body += h.date_input("Date Joined:", "date_joined")
+    body += h.text_input("Notes:", "notes", 40, 255)
+    body += h.submit("Add New Member")
+    body += h.form_end()
+    return h.page(body)
 
-    print lets_html.begin()
-    print lets_html.begin_body()
+def process_input(form):
+    out = "Content-Type: text/plain\n\n"
+    for key in form.keys():
+        out += form.getfirst(key) + "\n"
+    return out
 
-    print "<h3>Add New Member</h3><p>"
-    print "<form action=create_member.cgi method=post>"
-    print lets_html.text_input("Name:", "name", 40, 128)
-    print lets_html.text_input("Address:", "address", 40, 255)
-    print lets_html.text_input("Phone:", "phone_number_1", 20, 20)
-    print lets_html.text_input("Alt. Phone:", "phone_number_2", 20, 20)
-    print lets_html.text_input("Email:", "email_1", 40, 128)
-    print lets_html.text_input("Alt. Email:", "email_2", 40, 128)
-    print lets_html.date_input("Date Joined:", "date_joined")
-    print lets_html.text_input("Notes:", "notes", 40, 255)
-    print "</form>"
-
-    print lets_html.end_body()
-    print lets_html.end()
+if not form:
+    print form_for_input()
+else: # should have something to validate the form here really
+    print process_input(form)
