@@ -1,5 +1,14 @@
 --- Please post new entries at the top of the diary
 
+alisdair 29/08/2004
+
+How to commit:
+
+in letsconnector directory:
+$ cvs commit -m "letsconnector-nnnn"
+$ cvs rtag letsconnector-nnnn letsconnector
+where nnnn is the four digit version number.
+
 alisdair, sekenre 29/08/2004
 
 We've decided to work on the subset of functionality which does not use

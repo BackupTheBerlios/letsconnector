@@ -1,5 +1,9 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0007 alisdair, sekenre 29/08/2004
+
+Added instructions on committing to the diary.
+
 letsconnector-0006 alisdair, sekenre 29/08/2004
 
 M changelog.txt
