@@ -1,5 +1,33 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0003 AWT 11/07/2004
+
+Summary:
+- Some class-based stuff, as proposed in previous musings (see
+  new diary.txt with same date for explanation)
+
+A diary.txt
+
+Added new diary, first entry is cut-and-paste of an email to Kio.
+
+A cgi-bin/Fields.py
+M cgi-bin/lets_html.py
+
+These represent fields in a form. At present they have grabbed the HTML
+generation stuff which was in lets_html.py
+
+A cgi-bin/Form.py
+
+The Form classes will represent whole forms.
+
+A cgi-bin/LetsForms.py
+M cgi-bin/create_member.cgi
+
+At present there's only one for CreateMember, which takes the data which was
+previously in create_member.cgi. I think this is a lot more elegant, and will
+save repetition.
+
+
 letsconnector-0002 AWT 22/06/2004
 
 The create_member.cgi script and lets_html.py now work (have run these on my
@@ -9,6 +37,7 @@ pondering the use of some kind of CGI framework, looking at:
 http://crawdad.sourceforge.net/doc/2.0/index.html
 http://thraxil.org/code/cgi_app/
 http://www.object-craft.com.au/projects/albatross/albatross/
+
 
 letsconnector-0001 AWT 22/06/2004
 

@@ -1,0 +1,23 @@
+--- Please post new entries at the top of the diary
+
+AWT 11/07/2004
+
+From an email to Kio:
+
+"Having looked at a few CGI frameworks .... I'm inclined to agree with you -- 
+what do we need those for? Might nick a few ideas from them though, or even a 
+few functions if they're GPL'd.
+
+A lot of them are heavily template based, which I think is the wrong way to 
+go. It seems to me that programs should be honest about what they're doing -- 
+if they're generating HTML, then that's what the code should say. (Albatross, 
+which I'd thought looked to be the furthest forward, even added extra tags to 
+its templates, with conditionals and loops!) Hence the approach in my 
+create_member.cgi, using helper functions to keep the HTML generation clear. 
+I hope to do the same for the processing of the form input.
+
+I considered some kind of class-based structure, with classes such as Form, 
+Session etc. This would seem to be dishonest, as it implies statefulness 
+which we don't have -- every time a http request generates a CGI call, we get 
+a new instance of the interpreter. (It follows from this that such classes 
+are inefficient)."

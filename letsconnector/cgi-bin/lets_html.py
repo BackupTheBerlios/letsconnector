@@ -19,16 +19,9 @@ class helpers:
         return format % ( action )
     def form_end(self):
         return "</form>"
-    def text_input(self, description, name, size, maxlength):
-        format = """<b>%s</b> <input name="%s" size="%d" maxlength="%d"><br>\n"""
-        return format % ( description, name, size, maxlength )
-    def date_input(self, description, name):
-        format = """<b>%s</b> Date input not implemented :(<br>\n"""
-        return format % ( description )
     def submit(self, description):
         format = """<input type=submit value="%s">\n"""
         return format % ( description )
-
     # make a page with standard headers, footers etc.
     def page(self, body_text):
         page_out = self.begin()
