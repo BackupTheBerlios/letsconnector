@@ -1,0 +1,226 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[top=3cm, left=2.5cm, bottom=3cm, right=2.5cm]{geometry}
+
+\begin{document}
+
+\author{Alisdair Tullo, Kio Smallwood}
+
+\title{A Web-based System for \linebreak Local Exchange Trading Scheme \linebreak Administration}
+
+\maketitle
+
+\begin{abstract}
+
+Local Exchange Trading Schemes (LETS) currently suffer from a number of administrative 
+problems. It is difficult to share the load of administration work, LETS members have 
+poor access to and control of information, and the turnover cycle of a conventional 
+newsletter is too slow for many common trading requests. Also, a manually administered 
+scheme can place a restrictive limit on the number of members. A web-based system 
+could address these concerns, as well as providing additional benefits. 
+
+\end{abstract}
+
+\tableofcontents
+
+\clearpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+This document describes a plan to create web-based software to manage the information created and used in a Local Exchange Trading Scheme (LETS). It outlines some of the information handling problems which are currently faced by LETS\footnote{In this document we'll use `LETS' to mean both the singular and the plural, rather than `LETSs'.}, how these could be solved by a web-based system, and how we intend to implement such a system.
+
+\clearpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% BACKGROUND
+\section{Background}
+
+% - LETS in general
+\subsection{About LETS}
+
+% - Edinburgh LETS
+\subsection{Edinburgh LETS}
+
+\clearpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% MOTIVATION
+\section{Advantages of a web-based system and the problems it solves}
+
+% - Giving control to users
+%   - better control over own accounts
+%   - more people can do admin
+\subsection{Control for users}
+\label{control}
+
+At present, users of the LETS need to contact someone for any interaction with the scheme. The most common interaction is making a trade. To do this the LETS member must contact the treasurer -- at present usually by post or email. Members might also need to advertise an new want or offer. This is usually done either by contacting the directory maintainer, or the newsletter publisher.
+
+A web based system allows individuals to access and change information directly. In effect, members will `own' their information. Even those not on the web will benefit because there will be more people who are able to look up or change information for them. 
+
+% - More robust system
+%   - not dependent on physical location
+%   - can be backed up automatically to a number of sites
+\subsection{A more robust system}
+
+Currently the LETS system is dependent on information in certain physical locations. While we do make backups, we could still be vulnerable to temporary loss of that information, for example by a disk failure. Also restoring the information would depend on the availability of the people holding the data.
+
+If all this information were held in a central database, it would be trivial to make a number of off-site backups.
+
+% - Better communication
+%   - on web, so don't need to own a machine
+%   - full database system makes 'paper bridges' easier to do
+\subsection{Improved communications}
+
+One of the concerns over a web-based LETS is that it would make information less accessible to those with no or little access to an internet-connected computer. This project is founded on the assumption that the reverse is true, as explained below.
+
+Those without a computer, but with the skills to access the web, will be able to use any internet-connected computer to control their LETS information. Such a machine could be found in a web caf\'e, at a friend's house, or in the local library or community centre. Edinburgh also has a number of internet phone kiosks.
+
+Those who prefer to interact with the scheme without using a computer will also benefit. As mentioned in \ref{control}, more people will have direct access to the data. So, there will be more people who are able to handle members' requests to change their advertised wants and offers, and their contact details.
+
+More than this, the use of database software will allow LETS information to be accessible to those off the net in a way which is far superior to anything available previously. This we will refer to as ....
+
+\subsection{The `paper bridge'}
+
+Storing LETS information on the internet makes it easy to produce much better paper updates than the current quarterly newsletter. This could take a number of forms:
+
+A number of paper directories, maintained in various locations throughout Edinburgh. Libraries would be a good place to start, we could also use community centres, caf\'es etc. These have been suggested before, but the labour to maintain them would have been prohibitive. With a new database, any member with internet access could enter the date of the last update, and receive a printout of all updates since that date. This printout could then be added to the paper copy of the directory.
+
+% Automatically pay members for updating paper directories?
+
+These paper directories would be public to some degree, and so they would identify LETS members only by membership numbers. 
+
+Members who are off-net could ask for others to search the system for them. This could be a service which individuals provide. So, an internet-connected LETS member could charge, say, 0.5R\footnote{i.e., half a Reekie} to search for a particular item or service, or 1R to send a printout of all of the past month's updates.
+
+
+% -- What if the Reekie treasurer does not have web access or even a computer?
+% Should we allow for things like; Bulk updates (saving a datafile onto disk to 
+% be uploaded at regular intervals), or something like your 'paper bridge' 
+% idea?
+
+% - Publicly documents the scheme
+%   - better accountability -- who has seen your information?
+%   - continuity between committees
+%   - visibility of the workings of the scheme encourages new members
+\subsection{Accountability and change control}
+
+At present the workings of the scheme are opaque to all except those who are running it. Even then, it takes some effort to find out who changed what, and when. The changes made to LETS information are largely transient; the only well-recorded data are the current state.
+
+A database would allow change control\footnote{briefly, change controlled data has a record of what change was made and when, with the option to record a reason for the change} to be applied to all LETS information. This could be extended to all information held; members' contact details, Reekie transactions, subscription payments and more.
+
+This is tied in with the notion of accountability for administrators of the scheme. Members themselves would be able to find out which of the administrators had viewed or changed their information. Hopefully, this would reassure those whose primary concern about a computer based LETS system is security of personal information.
+
+% - Peripheral advantage
+%   - easier start to LETS
+%     - for those who have trouble getting to trading fairs
+%     - for those who have low self confidence
+%   - shows lots of activity going on
+%   - might provide a route for some to start using the Internet
+\subsection{Other advantages}
+
+There are some other peripheral advantages to LETS being accessible over the internet. While we don't feel that these should necessarily form the primary motivation for this project, they deserve a mention.
+
+\begin{description}
+\item[Easier start to LETS:] Most new members only begin trading after they have communicated with other people in LETS. Usually this is at a trade fair. For those who find trade fairs difficult~--- perhaps due to ill health, or low social confidence~--- an internet-accessible LETS could be a good way to start.
+\item[Visible activity:] Seeing all the current wants and offers together and knowing that lots of trading is going on can only encourage more trading. It might also help new members to start trading sooner. One such feature could be a counter displaying the total reekies traded in the last week, month or year.
+\item[Introduction to the internet:] For some, it could be a good introduction to the internet. A web-based LETS would be a good motivation to start using the `net, providing a website with familiar people and plenty of help available.
+\end{description}
+
+% - Control of information / privacy
+%   - individually nominated admins
+%   - `opt out' which would take all of a member's details off the server
+%   - could trade through another LETS member which they trust
+
+\clearpage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% IMPLEMENTATION PLAN
+\section{Implementation}
+
+% - Preliminary decision to use Python/MySQL for implementation
+%   - MySQL
+%     - free
+%     - industry standard, lots of help available
+%     - cross platform
+%   - Python
+%     - free
+%     - a lesser standard, still widely used, lots of folk willing to help
+%     - easy to read & learn, important for project to be passed on
+%     - cross platform
+%   - will at least use these for prototype, may reconsider
+
+\subsection{Technologies}
+
+For the prototype, we have chosen Python\footnote{ \textit{http://www.python.org} } for the user interface producing the actual web pages. we've chosen MySQL\footnote{ \textit{http://www.mysql.com} } for the database storing the LETS information. Both of these are industry-standard and cross-platform free software technologies. They are actively developed and supported, by both companies and a large community of volunteer developers.
+
+Python is not as popular as the other two free web languages, Perl\footnote{ \textit{http://www.perl.org} } and PHP\footnote{ \textit{http://www.php.net} }. However, Python code is much easier to read than these other two languages. Some would argue it's also easier to learn --- in fact, it's now being used as a teaching language at many universities. This increases the number of people that can help in development of the software, and increases the chances that it will be actively maintained in the future.
+
+Once the prototype is working, these decisions can be reconsidered. Both the database and the user interface could be rewritten if necessary.
+
+% Stages:
+% 1. implement an 'Address book'
+%   - this will become the part of the software which stores Members' details
+%   - good test of usability of the technology
+
+
+% 2. add facility to store Trades 
+%   - this will make a very basic, but functional LETS admin tool
+%   - proof of concept, can show the prototype at this point
+%   - hopefully some publicity
+%   - get feedback & bug reports
+%   - others can work independently on the look of the site
+
+
+% 3. add 'Services', 'Wants and Offers' tables
+%   - allows updates to be generated for directory
+%   - wants and offers can be used straight away as adverts
+
+
+% 4. add SSL, work on look of site
+%   - site can go live, into full use
+
+% DESIGN
+
+% Database:
+
+% Table 'Members':
+% Member Id (integer, key), Name (text 128), Address (text 256),
+% Phone Number x 2 (text 20), Email x 2 (text 128),
+% Date Joined, Date Left or Dormant, Next Renewal Date, Status (enum)
+% Status enum: Active, Dormant, Left, [ & Honorary Life Member, Unknown ? ]
+% Notes (text 256)
+
+% [Balance should not be stored separately, but always generated from records of trades. This can be an SQL function for speed.]
+
+% Table 'Trades':
+% Trade Id (integer, key), Date Entered, Date Of Trade*, Entered By Id** (integer), Statement Date***,
+% Amount (unsigned integer), From Id (integer), To Id (integer), Is This A Cheque (boolean),
+% Service (integer), Description (text 256)
+% *Final date on which the trade is confirmed, as opposed to Date Entered (will often be the same).
+% **Person who first enters the transaction onto the system
+% ***Date on cheque if available, or date entered electronically otherwise.
+
+% Table 'Unconfirmed Trades':
+% Same fields as Trade
+
+% Table 'Services': # potential things that more than one member might offer or want
+% Service Id (integer, key), Name (text 32), Description (text 128)
+
+% Table 'Wants and Offers':
+% Member Id (integer, key), Service Id (integer, key), Date Added, Permanent (boolean), Expiry Date, Description (text 256), Wants or Offers (enum), Deleted (boolean)
+% Wants or Offers enum: Wants, Offers, Wants and Offers, Other
+% *
+% Table 'Members Change Log':
+% Members Change Id (integer, key), Date Changed, Entered By Id (integer), Member Id (integer), Change Description (text 256)
+
+% Table 'Wants and Offers Change Log':
+% Wants and Offers Change Id (integer, key), Date Changed, Entered By Id (integer), Member Id (integer), Change Description (text 512)
+
+% User Interface:
+
+% Statement format
+% Member Id   Paid    (Paid By)   Date*    Category    Description (comment)   Credit  Debit
+% Balance After
+% * Date on cheque, or date entered for electronic
+
+% - letting members do their own accounting
+%     - payer logs in and makes payment
+%     - payee logs in and confirms it
+% Implemented via Unconfirmed Trades table
+
+\end{document}
