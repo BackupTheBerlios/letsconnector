@@ -8,14 +8,13 @@ class CreateMember(Form.Form):
         Form.Form.__init__(self, table)
 
     fields = [
-        Fields.TextField("Name:", "name", 40, 128, None),
-        Fields.TextField("Address:", "address", 40, 255, None),
-        Fields.TextField("Phone:", "phone_number_1", 20, 20, None),
-        Fields.TextField("Alt. Phone:", "phone_number_2", 20, 20, None),
-        Fields.TextField("Email:", "email_1", 40, 128, None),
-        Fields.TextField("Alt. Email:", "email_2", 40, 128, None),
-#        Fields.DateField("Date Joined:", "date_joined"),
-        Fields.TextField("Notes:", "notes", 40, 255, None)
+        Fields.IntField("Membership number:", "member_id", 5),
+#        Fields.PasswordField("Password:", "sha1_password"),
+#        Fields.DateField("Date joined:", "date_joined"),
+#        Fields.DateField("Date left (or dormant):", "date_left_or_dormant"),
+#        Fields.DateField("Next renewal date:", "next_renewal_date"),
+#        Fields.DateField("Membership status:", "status"),
+        Fields.TextField("Notes:", "notes", 40, 255)
     ]
     title = "Create Member"
     action = "create_member.cgi"

@@ -1,5 +1,13 @@
 --- Please post new entries at the top of the diary
-AWT 10/08/2004
+
+alisdair, sekenre 29/08/2004
+
+We've decided to work on the subset of functionality which does not use
+personal data. This is because we want the system to be useful as soon as
+possible. The planned subset will allow distributed updating and access for
+wants and offers.
+
+sekenre 10/08/2004
 
 I'm checking in this version to note that I've put a short project description
 in the project summary page and also categorised us in the Trove software map.
@@ -23,7 +31,7 @@ Operating System: OS Independent, Linux
 Programming Language: Python
 Topic: Front-Ends, Accounting, Other/Nonlisted Topic
 
-AWT 11/07/2004
+alisdair 11/07/2004
 
 From an email to Kio:
 

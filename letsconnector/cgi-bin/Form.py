@@ -22,14 +22,14 @@ class Form:
         html_for_input = self._form_title()
         html_for_input += self._form_begin()
         for field in self.fields:
-            html_for_input += field.input_html()
+            html_for_input += field.HtmlForForm()
         html_for_input += self._submit()
         html_for_input += self._form_end()
         return html_for_input
 
     def receive_input(self, form):
         for field in self.fields:
-            field.set_value(form.getfirst(field.name))
+            field.SetValue(form.getfirst(field.name))
 
     def mysql_insert(self):
         """Returns a MySQL command to insert the data held in this form into
@@ -39,8 +39,8 @@ class Form:
         name_list = ""
         value_list = ""
         for field in self.fields:
-            name_list += field.name_for_mysql_insert() + ", "
-            value_list += field.value_for_mysql_insert() + ", "
+            name_list += field.ColumnForMySqlInsert() + ", "
+            value_list += field.ValueForMySqlInsert() + ", "
         # tidy excess commas and spaces
         name_list = name_list[ 0 : len(name_list) - 2 ]
         value_list = value_list[ 0 : len(value_list) - 2 ]

@@ -1,10 +1,31 @@
 --- Please post new entries at the top of the changelog
 
-letsconnector-0005 AWT 10/08/2004
+letsconnector-0006 alisdair, sekenre 29/08/2004
+
+M changelog.txt
+M diary.txt
+
+Now use berlios.org usernames for logging commits and diary entries.
+
+M cgi-bin/Fields.py
+
+Numerous renamings. Commented out DateField -- it's useless for the time
+being. Added IntField class. Eliminated Field superclass.
+
+M cgi-bin/LetsForms.py
+M misc/tables.sql
+
+Removed personal information fields from CreateMember class.
+
+A doc/lets_letter.tex
+
+Project announcement letter for UK LETS groups.
+
+letsconnector-0005 sekenre 10/08/2004
 
 Added us to Trove and put in a short description. Details in diary.txt
 
-letsconnector-0004 AWT 09/08/2004
+letsconnector-0004 alisdair 09/08/2004
 
 M Fields.py
 M Form.py
@@ -33,7 +54,7 @@ M lets_html.py
 Some helpers moved to the Form class where they really belong.
 
 
-letsconnector-0003 AWT 11/07/2004
+letsconnector-0003 alisdair 11/07/2004
 
 Summary:
 - Some class-based stuff, as proposed in previous musings (see
@@ -61,7 +82,7 @@ previously in create_member.cgi. I think this is a lot more elegant, and will
 save repetition.
 
 
-letsconnector-0002 AWT 22/06/2004
+letsconnector-0002 alisdair 22/06/2004
 
 The create_member.cgi script and lets_html.py now work (have run these on my
 own machine). After the submit create_member.cgi simply prints the input it
@@ -72,7 +93,7 @@ http://thraxil.org/code/cgi_app/
 http://www.object-craft.com.au/projects/albatross/albatross/
 
 
-letsconnector-0001 AWT 22/06/2004
+letsconnector-0001 alisdair 22/06/2004
 
 Added the cgi-bin directory, this changelog, and the (small and incomplete)
 Python files left out of the initial import.
