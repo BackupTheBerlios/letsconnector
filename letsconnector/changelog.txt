@@ -1,0 +1,6 @@
+--- Please post new entries at the top of the changelog
+
+letsconnector-0001 AWT 22/06/2004
+
+Added the cgi-bin directory, this changelog, and the (small and incomplete)
+Python files left out of the initial import.
