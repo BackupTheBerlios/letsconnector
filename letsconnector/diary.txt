@@ -1,4 +1,27 @@
 --- Please post new entries at the top of the diary
+AWT 10/08/2004
+
+I'm checking in this version to note that I've put a short project description
+in the project summary page and also categorised us in the Trove software map.
+
+I also added www.edinburghlets.org.uk as our homepage. Perhaps I could write a
+short summary to the Edinburgh LETS website to link to directly along with an
+email address for more information? Let me know what you think.
+
+Hope the text works out, anyway, here's the transcript;
+
+This project is a Local Exchange and Trading System admin tool, accessible
+from the web for the use of LETS members. It is composed of an online
+directory, accounting and payment system, and an online newsletter.
+
+Development Status: 1 - Planning, 2 - Pre-Alpha
+Environment: Web Environment
+Intended Audience: End Users/Desktop, Other Audience
+License: GNU General Public License (GPL)
+Natural Language: English
+Operating System: OS Independent, Linux
+Programming Language: Python
+Topic: Front-Ends, Accounting, Other/Nonlisted Topic
 
 AWT 11/07/2004
 

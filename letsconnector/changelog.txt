@@ -1,5 +1,9 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0005 AWT 10/08/2004
+
+Added us to Trove and put in a short description. Details in diary.txt
+
 letsconnector-0004 AWT 09/08/2004
 
 M Fields.py
