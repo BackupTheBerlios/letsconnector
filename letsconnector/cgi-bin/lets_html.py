@@ -12,16 +12,6 @@ class helpers:
         return "</body>\n"
     def end(self):
         return "</html>\n"
-    # Form helpers
-    # (this should make it easier to add tables)
-    def form_begin(self, action):
-        format = """<form action="%s" method=post>\n"""
-        return format % ( action )
-    def form_end(self):
-        return "</form>"
-    def submit(self, description):
-        format = """<input type=submit value="%s">\n"""
-        return format % ( description )
     # make a page with standard headers, footers etc.
     def page(self, body_text):
         page_out = self.begin()
