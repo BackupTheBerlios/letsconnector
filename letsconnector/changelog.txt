@@ -1,8 +1,51 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0008 alisdair 04/06/2005
+
+Summary:
+- Fixed DateField so it can be used for timestamps (not date input)
+- Added a page to add a trade
+- Added an index to demo creation of members and trades
+
+M cgi-bin/Fields.py
+- Fixed DateField type. At present only a silent date (with argument
+  suppress_input=True) actually works -- this is used for the timestamps
+  in the trades and member creation.
+
+M cgi-bin/Form.py
+- Tolerate an input of None in a form (for those fields which suppress
+  input)
+
+M cgi-bin/LetsForms.py
+- Add a date field to the CreateMember form, for a timestamp
+- Add new Form -- Trade.
+
+A cgi-bin/trade.cgi
+- Page which adds a new trade.
+
+A cgi-bin/ShowTable.py
+A cgi-bin/show_members.cgi
+A cgi-bin/show_trades.cgi
+- Code to display the members and trades table, for testing.
+
+M cgi-bin/lets_db.py
+- Added commented-out line used in the demo site.
+
+A misc/min_spec_tables.sql
+- The tables used for the minimum spec demo -- see MinimumSpecification in
+  the wiki.
+
+A cgi-bin/index.html
+- An index to all the .cgi tables for the demo site.
+
+R cgi-bin/test.cgi
+- Unnecessary test file
+
+
 letsconnector-0007 alisdair, sekenre 29/08/2004
 
 Added instructions on committing to the diary.
+
 
 letsconnector-0006 alisdair, sekenre 29/08/2004
 
@@ -25,9 +68,11 @@ A doc/lets_letter.tex
 
 Project announcement letter for UK LETS groups.
 
+
 letsconnector-0005 sekenre 10/08/2004
 
 Added us to Trove and put in a short description. Details in diary.txt
+
 
 letsconnector-0004 alisdair 09/08/2004
 

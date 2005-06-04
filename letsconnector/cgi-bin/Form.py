@@ -29,7 +29,9 @@ class Form:
 
     def receive_input(self, form):
         for field in self.fields:
-            field.SetValue(form.getfirst(field.name))
+            form_value = form.getfirst(field.name)
+            if form_value != None:
+                field.SetValue(form_value)
 
     def mysql_insert(self):
         """Returns a MySQL command to insert the data held in this form into
