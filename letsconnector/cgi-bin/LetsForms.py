@@ -63,3 +63,32 @@ class Trade(Form.Form):
         cursor.execute(mysql_string, [])
         connection.commit()
         connection.close()
+
+class GetBalance(Form.Form):
+    """Form for getting member's balance"""
+    def __init__(self, table):
+        Form.Form.__init__(self, table)
+
+    fields = [ Fields.IntField("Get balance for member (ID):", "balance_query_id", 5) ]
+    title = "Get Member Balance"
+    action = "get_balance.cgi"
+    submit_text = "Get Balance"
+
+    def db_action(self):
+        connection = lets_db.connection()
+        self.id = int(self.fields[0].value)
+
+        amount_paid_query = "SELECT amount FROM trades WHERE member_id_from=%d" % self.id
+        amount_received_query = "SELECT amount FROM trades WHERE member_id_to=%d" % self.id
+
+        cursor = connection.cursor()
+        n = cursor.execute(amount_paid_query, [])
+        amount_paid = sum( [x[0] for x in cursor.fetchmany(n)] )
+
+        cursor = connection.cursor()
+        n = cursor.execute(amount_received_query, [])
+        amount_received = sum( [x[0] for x in cursor.fetchmany(n)] )
+
+        self.balance = amount_received - amount_paid
+
+        connection.close()

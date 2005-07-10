@@ -1,5 +1,20 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0009 alisdair 04/06/2005
+
+Summary:
+- Added a means of getting a member's balance
+
+M cgi-bin/LetsForms.py
+- Added GetBalance form, which just takes a member ID.
+
+A cgi-bin/get_balance.cgi
+- New page to get a member's balance.
+
+M cgi-bin/index.html
+- Added link to get_balance.cgi
+
+
 letsconnector-0008 alisdair 04/06/2005
 
 Summary:
