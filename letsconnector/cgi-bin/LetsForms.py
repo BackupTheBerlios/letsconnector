@@ -1,6 +1,7 @@
 import Form
 import Fields
 import lets_db
+import lets_form
 import datetime
 
 class CreateMember(Form.Form):
@@ -63,6 +64,21 @@ class Trade(Form.Form):
         cursor.execute(mysql_string, [])
         connection.commit()
         connection.close()
+
+class ProduceStatement(Form.Form):
+    """Form to get a membership number to produce a statement"""
+    def __init__(self, table):
+        Form.Form.__init__(self, table)
+
+    fields = [
+        Fields.IntField("Membership number:", "member_id", 5)
+        ]
+    title = "Produce statement"
+    action = "produce_statement.cgi"
+    submit_text = "Show statement"
+
+    def mysql_insert(self, form):
+        raise lets_forms.FormBadException
 
 class GetBalance(Form.Form):
     """Form for getting member's balance"""

@@ -1,5 +1,23 @@
 --- Please post new entries at the top of the changelog
 
+letsconnector-0010 karlnaylor 25/07/2005
+
+Summary:
+- Added a simple statement generator
+
+M cgi-bin/LetsForms.py
+- Added ProduceStatement form which takes a member ID.
+
+M cgi-bin/index.html
+- Added link to produce_statement.cgi
+
+M cgi-bin/lets_form.py
+- Added exception classes for forms submitted empty and unsupported
+  operations on forms.
+
+A cgi-bin/produce_statement.cgi
+- New page to produce a plain text statement.
+
 letsconnector-0009 alisdair 04/06/2005
 
 Summary:

@@ -14,6 +14,17 @@ class FormFieldWrongType(FormException):
     def __init__(self, f):
         FormException.__init__(self, f)
 
+# raise this when an operation (eg. insert, query) is attempted on an
+# inappropriate form
+class FormBadOperation(Exception):
+    def __init__(self):
+        Exception.__init__(self)
+
+# raise this when a query is submitted with no fields entered
+class FormEmptyQuery(Exception):
+    def __init__(self):
+        Exception.__init__(self)
+
 def text(form, field):
     """get a text field from the form, check present, check textyness"""
     val = form.getfirst(field)
